@@ -1,0 +1,93 @@
+.card {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  > div {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    img {
+      border-radius: inherit;
+      display: none;
+      width: 100%;
+      height: 100%;
+      &.desktop {
+        display: block;
+      }
+    }
+  }
+  > button {
+    border-radius: 20px;
+    background-color: var(--Rose-50);
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    > div {
+      cursor: pointer;
+      &.open {
+        background-color: var(--Red);
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: 10px;
+        height: 30px;
+        border-radius: inherit;
+        img {
+          padding: 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid var(--Rose-50);
+        }
+        p {
+          color: var(--Rose-50);
+        }
+      }
+      &.close {
+        display: flex;
+        img {
+          margin-right: 10px;
+        }
+        * {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  > article {
+    position: absolute;
+    bottom: 20px;
+    padding-inline: 10px;
+    p {
+      &:nth-child(1) {
+        color: var(--Rose-300);
+      }
+      &:nth-child(2) {
+        margin-block: 5px;
+        color: var(--Rose-900);
+      }
+      &:nth-child(3) {
+        color: var(--Red);
+      }
+    }
+  }
+  &.selected {
+    div {
+      border-radius: 10px;
+      border: 1px solid var(--Red) !important;
+    }
+    .open {
+      display: flex;
+    }
+    .close {
+      display: none;
+    }
+  }
+}

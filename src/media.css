@@ -1,0 +1,31 @@
+/* ? card's container style */
+@media screen and (max-width: 900px) {
+  main > section {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+@media screen and (max-width: 570px) {
+  main > section {
+    grid-template-columns: 250px;
+  }
+}
+/* ? body style */
+@media screen and (max-width: 1120px) {
+  body {
+    flex-direction: column;
+  }
+  main > section {
+    width: calc(100vw - 60px);
+    justify-content: center;
+  }
+  aside {
+    margin-inline: auto;
+    width: calc(100vw - 60px);
+  }
+}
+/* ? confirm alert style */
+@media screen and (max-width: 400px) {
+  .content {
+    width: calc(100% - 30px) !important;
+  }
+}
